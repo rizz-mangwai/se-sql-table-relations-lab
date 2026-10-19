@@ -104,7 +104,7 @@ WHERE od.productCode IN (
     GROUP BY p.productCode
     HAVING COUNT(DISTINCT o2.customerNumber) < 20
 )
-ORDER BY e.employeeNumber;
+ORDER BY e.lastName;
 """, conn)
 
 conn.close()
